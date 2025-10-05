@@ -31,7 +31,7 @@ public class VotifierProtocol1Decoder extends ByteToMessageDecoder {
 
         if (buf.readableBytes() > 256) {
             // They sent too much data.
-            throw new QuietException("Could not decrypt data from " + ctx.channel().remoteAddress() + " as it is too long. Attack?");
+            // throw new QuietException("Could not decrypt data from " + ctx.channel().remoteAddress() + " as it is too long. Attack?");
         }
 
         byte[] block = ByteBufUtil.getBytes(buf);
